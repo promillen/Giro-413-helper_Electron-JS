@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self';">
+    <title>Giro-413 Player</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container" id="setup">
+        <h1>PROGRAM SETUP</h1>
+
+        <label for="teamsInput">Number of Teams (2-99):</label>
+        <input type="number" id="teamsInput" name="teamsInput" min="2" max="99" required>
+        <br>
+
+        <label for="entriesInput">Number of Entries (1-99):</label>
+        <input type="number" id="entriesInput" name="entriesInput" min="1" max="99" required>
+        <br>
+
+        <label for="fileInput">Upload Excel File:</label>
+        <input type="file" id="fileInput" name="fileInput" accept=".xlsx" required>
+        <br>
+
+        <!-- Checkbox and Label centered horizontally -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="songs" name="songs" />
+            <label for="songs">Customize team names and songs</label>
+        </div>
+        
+        <!-- Description for the checkbox -->
+        <div class="checkbox-description">
+            If checked, you will be able to assign specific names and songs to each team on the next page.<br> If unchecked, default names and songs (e.g., team1, team2 and so forth) will be automatically assigned. <br> See readme for further details.
+        </div>
+        
+        <button id="startButton" disabled>Start Program</button>
+    </div>
+
+    <script src="../renderer.js"></script>
+</body>
+</html>

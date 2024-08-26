@@ -1,0 +1,11 @@
+{
+    "watch": [
+      "main.js",
+      "renderer.js",
+      "screens/main.html",
+      "screens/setup.html",
+      "screens/teamInfoInput.html"
+    ],
+    "ext": "js html",
+    "exec": "npm start"
+}  

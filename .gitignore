@@ -1,0 +1,7 @@
+node_modules
+~$Pointscore.xlsx
+package-lock.json
+build/
+dist/win-unpacked/
+dist/builder-debug.yml
+dist/builder-effective-config.yaml

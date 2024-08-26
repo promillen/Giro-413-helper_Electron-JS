@@ -1,0 +1,52 @@
+{
+  "name": "giro-413-helper",
+  "productName": "Giro 413 Helper",
+  "version": "1.0.0",
+  "main": "main.js",
+  "build": {
+    "appId": "com.giro-413-helper",
+    "directories": {
+      "buildResources": "build"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "icon": "build/icon.png"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "start:nodemon": "nodemon --config nodemon.json",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "keywords": [],
+  "author": "Christoffer Kolbe Boye-Hansen",
+  "license": "ISC",
+  "description": "Program that helps you arrange a giro-413 event",
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7",
+    "xlsx": "^0.18.5"
+  }
+}
